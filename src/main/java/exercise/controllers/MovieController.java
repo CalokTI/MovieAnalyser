@@ -40,8 +40,8 @@ public class MovieController {
     @ResponseBody
     @GetMapping("/getRandom")
     public String getRandom(){
-        ArrayList<Movie> randomMovies = movieAnalysisService.getRandomMovies(10);
-        String str ="<h1>10 random movies</h1><br>";
+        ArrayList<Movie> randomMovies = movieAnalysisService.getRandomMovies(1);
+        String str ="<h1>1 random movies</h1><br>";
         for (int i = 0; i < randomMovies.size(); i++) {
             str += randomMovies.get(i).getTitle() + "<br>";
         }
